@@ -21,7 +21,7 @@ namespace MohawkGame2D
 
         }
 
-        public void Update(button[] buttonDetect)
+        public void choiceUpdate(button[] buttonDetect)
         {
             mousePos();
             collisionProcess(buttonDetect);
@@ -60,11 +60,13 @@ namespace MohawkGame2D
                     if (select.answer)
                     {
                         Game.question++;
+                        Console.WriteLine("Correct!");
                     }
                     // If player touches the goal
                     if (select.answer == false)
                     {
                         Game.question++;
+                        Console.WriteLine("Wrong!");
                     }
                 }
 

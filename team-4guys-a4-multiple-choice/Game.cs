@@ -66,6 +66,47 @@ namespace MohawkGame2D
                 {
                     questionOne[i].Update();
                 }
+                Cursor.Update(questionOne);
+            }
+            if (question == 1)
+            {
+                for (int i = 0; i < questionOne.Length; i++)
+                {
+                    questionOne[i].Update();
+                }
+                Cursor.Update(questionOne);
+            }
+            if (question == 2)
+            {
+                for (int i = 0; i < questionOne.Length; i++)
+                {
+                    questionOne[i].Update();
+                }
+                Cursor.Update(questionOne);
+            }
+            if (question == 3)
+            {
+                for (int i = 0; i < questionOne.Length; i++)
+                {
+                    questionOne[i].Update();
+                }
+                Cursor.Update(questionOne);
+            }
+            if (question == 4)
+            {
+                for (int i = 0; i < questionOne.Length; i++)
+                {
+                    questionOne[i].Update();
+                }
+                Cursor.Update(questionOne);
+            }
+            if (question == 5)
+            {
+                for (int i = 0; i < questionOne.Length; i++)
+                {
+                    questionOne[i].Update();
+                }
+                Cursor.Update(questionOne);
             }
         }
     }
