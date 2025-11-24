@@ -1,5 +1,4 @@
 ﻿// Include the namespaces (code libraries) you need below.
-using GAME_10003_Game_Development_Foundations___2D_Game_Template__v1._4_1;
 using System;
 using System.Numerics;
 
@@ -67,6 +66,47 @@ namespace MohawkGame2D
                 {
                     questionOne[i].Update();
                 }
+                Cursor.Update(questionOne);
+            }
+            if (question == 1)
+            {
+                for (int i = 0; i < questionOne.Length; i++)
+                {
+                    questionOne[i].Update();
+                }
+                Cursor.Update(questionOne);
+            }
+            if (question == 2)
+            {
+                for (int i = 0; i < questionOne.Length; i++)
+                {
+                    questionOne[i].Update();
+                }
+                Cursor.Update(questionOne);
+            }
+            if (question == 3)
+            {
+                for (int i = 0; i < questionOne.Length; i++)
+                {
+                    questionOne[i].Update();
+                }
+                Cursor.Update(questionOne);
+            }
+            if (question == 4)
+            {
+                for (int i = 0; i < questionOne.Length; i++)
+                {
+                    questionOne[i].Update();
+                }
+                Cursor.Update(questionOne);
+            }
+            if (question == 5)
+            {
+                for (int i = 0; i < questionOne.Length; i++)
+                {
+                    questionOne[i].Update();
+                }
+                Cursor.Update(questionOne);
             }
         }
     }
