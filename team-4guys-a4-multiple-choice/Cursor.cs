@@ -1,75 +1,94 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using MohawkGame2D;
+using System;
+using System.Drawing;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MohawkGame2D
+internal class cursorDetect
 {
-    internal class cursorDetect
+    // Array update (For actual game)
+    public void Update(button[] buttonList)
     {
-        // Cursor position and size
-        Vector2 pos;
-        Vector2 size;
+        detectClicksArray(buttonList);
+    }
 
-        // Set up for cursor position and size
-        public cursorDetect(Vector2 pos, Vector2 size)
+    // Single button update (For title and restart)
+    public void Update(button singleButton)
+    {
+        detectClickSingle(singleButton);
+    }
+
+    // Array click detect process
+    public void detectClicksArray(button[] buttonList)
+    {
+        Vector2 mouse = Input.GetMousePosition();
+
+        for (int i = 0; i < buttonList.Length; i++)
         {
-            this.pos = pos;
-            this.size = size;
+            button btn = buttonList[i];
 
-        }
+            float top = btn.pos.Y;
+            float bottom = btn.pos.Y + btn.size.Y;
+            float left = btn.pos.X;
+            float right = btn.pos.X + btn.size.X;
 
-        public void choiceUpdate(button[] buttonDetect)
-        {
-            mousePos();
-            collisionProcess(buttonDetect);
-        }
+            bool clicked =
+                mouse.X >= left &&
+                mouse.X <= right &&
+                mouse.Y >= top &&
+                mouse.Y <= bottom &&
+                Input.IsMouseButtonPressed(MouseInput.Left);
 
-        public void mousePos()
-        {
-            pos = Input.GetMousePosition();
-        }
-
-        // Collision detection
-        public void collisionProcess(button[] buttonDetect)
-        {
-            for (int buttonBox = 0; buttonBox < buttonDetect.Length; buttonBox++)
+            if (clicked)
             {
-                button select = buttonDetect[buttonBox];
-
-                // Hitbox collision boundaries
-                float hitboxTop = select.pos.Y;
-                float hitboxBottom = select.pos.Y + select.size.Y;
-                float hitboxLeft = select.pos.X;
-                float hitboxRight = select.pos.X + select.size.X;
-
-                // Player collision boundaries
-                float playerTop = pos.Y - size.Y / 2;
-                float playerBottom = pos.Y + size.Y / 2 - 1;
-                float playerLeft = pos.X - size.X / 2;
-                float playerRight = pos.X + size.X / 2 - 1;
-
-                // Checks if they touch each other
-                bool onClick = playerRight >= hitboxLeft && playerLeft <= hitboxRight && playerBottom >= hitboxTop && playerTop <= hitboxBottom && Input.IsMouseButtonPressed(MouseInput.Left);
-
-                if (onClick)
+                // If player selects correct answer
+                if (btn.answer)
                 {
-                    // If player touches the wall
-                    if (select.answer)
-                    {
-                        Game.question++;
-                        Console.WriteLine("Correct!");
-                    }
-                    // If player touches the goal
-                    if (select.answer == false)
-                    {
-                        Game.question++;
-                        Console.WriteLine("Wrong!");
-                    }
+                    Game.question++;
+                    Game.point++;
+                    Console.WriteLine("DEBUG: Correct!");
                 }
+                // If player selects wrong answer
+                else
+                {
+                    Game.question++;
+                    Console.WriteLine("DEBUG: Wrong!");
+                    Game.incorrect = true;
+                }
+            }
+        }
+    }
 
+    // Single click detect process
+    public void detectClickSingle(button btn)
+    {
+        Vector2 mouse = Input.GetMousePosition();
+
+        float top = btn.pos.Y;
+        float bottom = btn.pos.Y + btn.size.Y;
+        float left = btn.pos.X;
+        float right = btn.pos.X + btn.size.X;
+
+        bool clicked =
+            mouse.X >= left &&
+            mouse.X <= right &&
+            mouse.Y >= top &&
+            mouse.Y <= bottom &&
+            Input.IsMouseButtonPressed(MouseInput.Left);
+
+        if (clicked)
+        {
+            // Title/Continue Button
+            if (btn.answer)
+            {
+                Game.question++;
+                Game.incorrect = false;
+                Console.WriteLine("DEBUG: Single button clicked!");
+            }
+            // Restart
+            else
+            {
+                Game.point = 0;
+                Game.question = 0;
             }
         }
     }
