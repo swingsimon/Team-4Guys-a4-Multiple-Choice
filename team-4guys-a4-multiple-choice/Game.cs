@@ -124,6 +124,7 @@ namespace MohawkGame2D
                     // WRONG
                     Continue.Update();
                     Cursor.Update(Continue);
+
                 }
             }
             if (question == 5)
@@ -151,6 +152,7 @@ namespace MohawkGame2D
                     // WRONG
                     Continue.Update();
                     Cursor.Update(Continue);
+
                 }
             }
             if (question == 7)
@@ -178,6 +180,7 @@ namespace MohawkGame2D
                     // WRONG
                     Continue.Update();
                     Cursor.Update(Continue);
+
                 }
             }
             if (question == 9)
@@ -205,6 +208,7 @@ namespace MohawkGame2D
                     // WRONG
                     Continue.Update();
                     Cursor.Update(Continue);
+
                 }
             }
             if (question == 10)
