@@ -11,8 +11,8 @@ namespace MohawkGame2D
     public class Game
     {
         // Place your variables here:
-        public static int question = 11;
-        public static int point = 1;
+        public static int question = 0;
+        public static int point = 0;
         public static bool incorrect = false;
         public static bool canPlay = false;
         cursorDetect Cursor = new cursorDetect();
