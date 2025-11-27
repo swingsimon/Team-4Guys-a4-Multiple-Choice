@@ -3,7 +3,7 @@ using System;
 using System.Drawing;
 using System.Numerics;
 
-internal class cursorDetect
+public class cursorDetect
 {
     // Array update (For actual game)
     public void Update(button[] buttonList)

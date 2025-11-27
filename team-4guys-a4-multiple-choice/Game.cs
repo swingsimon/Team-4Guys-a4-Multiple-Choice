@@ -15,6 +15,9 @@ namespace MohawkGame2D
         public static int point = 0;
         public static bool incorrect = false;
         public static bool canPlay = false;
+
+        EasterEgg easterEgg = new EasterEgg();
+
         cursorDetect Cursor = new cursorDetect();
 
         button Title = new button(new Vector2(250, 200), new Vector2(250, 100), true, Color.Green, "   PLAY", 50);
@@ -297,7 +300,7 @@ namespace MohawkGame2D
                     // Try again!
 
                 }
-                if (point == 3 || point == 4 )
+                if (point == 3 || point == 4)
                 {
                     Text.Draw("Not bad!", 230, 240);
                     if (canPlay)
@@ -319,8 +322,15 @@ namespace MohawkGame2D
                     // Perfect!
 
                 }
+                if (point == 5 && question == 11) // perfect score condition, hiding easter egg
+                {
+                    easterEgg.Reveal();
+                }
+
+                easterEgg.Update();
+
             }
         }
-    }
 
+    }
 }
