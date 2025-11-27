@@ -14,16 +14,16 @@ namespace MohawkGame2D
         public bool answer;
         public string text;
         public int textSize;
-
         Color color;
 
-        public button(Vector2 pos, Vector2 size, bool answer, string text, int textSize)
+        public button(Vector2 pos, Vector2 size, bool answer, Color color, string text, int textSize)
         {
             this.pos = pos;
             this.size = size;
             this.answer = answer;
             this.text = text;
             this.textSize = textSize;
+            this.color = color;
         }
 
         public void Update()
@@ -33,15 +33,14 @@ namespace MohawkGame2D
 
         public void buttonDraw()
         {
-            Draw.LineSize = 2;
-            Draw.LineColor = Color.Green;
-            Draw.FillColor = Color.Black;
+            Draw.LineSize = 0;
+            Draw.FillColor = color;
             Draw.Rectangle(pos, size);
 
             float textPosX = pos.X + 2;
             float textPosY = pos.Y + size.Y / 2;
 
-            Text.Color = Color.Green;
+            Text.Color = Color.Black;
             Text.Size = textSize;
             Text.Draw(text, textPosX, textPosY);
         }

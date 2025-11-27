@@ -46,6 +46,7 @@ internal class cursorDetect
                     Game.question++;
                     Game.point++;
                     Console.WriteLine("DEBUG: Correct!");
+                    Game.canPlay = true;
                 }
                 // If player selects wrong answer
                 else
@@ -53,6 +54,7 @@ internal class cursorDetect
                     Game.question++;
                     Console.WriteLine("DEBUG: Wrong!");
                     Game.incorrect = true;
+                    Game.canPlay = true;
                 }
             }
         }
@@ -82,13 +84,16 @@ internal class cursorDetect
             {
                 Game.question++;
                 Game.incorrect = false;
-                Console.WriteLine("DEBUG: Single button clicked!");
+                Console.WriteLine("DEBUG: Continue Button clicked!");
+                Game.canPlay = true;
+
             }
             // Restart
             else
             {
                 Game.point = 0;
                 Game.question = 0;
+                Console.WriteLine("DEBUG: Restart Button clicked!");
             }
         }
     }
