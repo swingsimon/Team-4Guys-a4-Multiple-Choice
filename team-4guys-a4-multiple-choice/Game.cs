@@ -100,11 +100,15 @@ namespace MohawkGame2D
                     // CORRECT
                     if (canPlay)
                     {
+
                         Audio.Play(Audio.LoadSound("Audio/duolingo-correct.mp3"));
                         canPlay = false;
                     }
                     Continue.Update();
                     Cursor.Update(Continue);
+                    Text.Size = 100;
+                    Text.Color = Color.Black;
+                    Text.Draw("CORRECT!", 210, 60);
 
                 }
                 else
@@ -112,12 +116,15 @@ namespace MohawkGame2D
                     // WRONG
                     if (canPlay)
                     {
+
                         Audio.Play(Audio.LoadSound("Audio/duolingo-wrong.mp3"));
                         canPlay = false;
                     }
                     Continue.Update();
                     Cursor.Update(Continue);
-
+                    Text.Size = 100;
+                    Text.Color = Color.Black;
+                    Text.Draw("WRONG!", 210, 60);
                 }
             }
             if (question == 3)
@@ -139,11 +146,15 @@ namespace MohawkGame2D
                     // CORRECT
                     if (canPlay)
                     {
+
                         Audio.Play(Audio.LoadSound("Audio/duolingo-correct.mp3"));
                         canPlay = false;
                     }
                     Continue.Update();
                     Cursor.Update(Continue);
+                    Text.Size = 100;
+                    Text.Color = Color.Black;
+                    Text.Draw("CORRECT!", 210, 60);
 
                 }
                 else
@@ -151,11 +162,15 @@ namespace MohawkGame2D
                     // WRONG
                     if (canPlay)
                     {
+
                         Audio.Play(Audio.LoadSound("Audio/duolingo-wrong.mp3"));
                         canPlay = false;
                     }
                     Continue.Update();
                     Cursor.Update(Continue);
+                    Text.Size = 100;
+                    Text.Color = Color.Black;
+                    Text.Draw("WRONG!", 210, 60);
 
                 }
             }
@@ -178,11 +193,15 @@ namespace MohawkGame2D
                     // CORRECT
                     if (canPlay)
                     {
+
                         Audio.Play(Audio.LoadSound("Audio/duolingo-correct.mp3"));
                         canPlay = false;
                     }
                     Continue.Update();
                     Cursor.Update(Continue);
+                    Text.Size = 100;
+                    Text.Color = Color.Black;
+                    Text.Draw("CORRECT!", 210, 60);
 
                 }
                 else
@@ -190,12 +209,15 @@ namespace MohawkGame2D
                     // WRONG
                     if (canPlay)
                     {
+
                         Audio.Play(Audio.LoadSound("Audio/duolingo-wrong.mp3"));
                         canPlay = false;
                     }
                     Continue.Update();
                     Cursor.Update(Continue);
-
+                    Text.Size = 100;
+                    Text.Color = Color.Black;
+                    Text.Draw("WRONG!", 210, 60);
                 }
             }
             if (question == 7)
@@ -217,24 +239,30 @@ namespace MohawkGame2D
                     // CORRECT
                     if (canPlay)
                     {
+
                         Audio.Play(Audio.LoadSound("Audio/duolingo-correct.mp3"));
                         canPlay = false;
                     }
                     Continue.Update();
                     Cursor.Update(Continue);
-
+                    Text.Size = 100;
+                    Text.Color = Color.Black;
+                    Text.Draw("CORRECT!", 210, 60);
                 }
                 else
                 {
                     // WRONG
                     if (canPlay)
                     {
+
                         Audio.Play(Audio.LoadSound("Audio/duolingo-wrong.mp3"));
                         canPlay = false;
                     }
                     Continue.Update();
                     Cursor.Update(Continue);
-
+                    Text.Size = 100;
+                    Text.Color = Color.Black;
+                    Text.Draw("WRONG!", 210, 60);
                 }
             }
             if (question == 9)
@@ -256,24 +284,30 @@ namespace MohawkGame2D
                     // CORRECT
                     if (canPlay)
                     {
+
                         Audio.Play(Audio.LoadSound("Audio/duolingo-correct.mp3"));
                         canPlay = false;
                     }
                     Continue.Update();
                     Cursor.Update(Continue);
-
+                    Text.Size = 100;
+                    Text.Color = Color.Black;
+                    Text.Draw("CORRECT!", 210, 60);
                 }
                 else
                 {
                     // WRONG
                     if (canPlay)
                     {
+
                         Audio.Play(Audio.LoadSound("Audio/duolingo-wrong.mp3"));
                         canPlay = false;
                     }
                     Continue.Update();
                     Cursor.Update(Continue);
-
+                    Text.Size = 100;
+                    Text.Color = Color.Black;
+                    Text.Draw("WRONG!", 210, 60);
                 }
             }
             if (question == 11)
