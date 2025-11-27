@@ -98,6 +98,8 @@ namespace MohawkGame2D
                 if (incorrect == false)
                 {
                     // CORRECT
+                    Text.Size = 100;
+                    Text.Draw("CORRECT!", 210, 60);
                     if (canPlay)
                     {
 
@@ -114,6 +116,8 @@ namespace MohawkGame2D
                 else
                 {
                     // WRONG
+                    Text.Size = 100;
+                    Text.Draw("WRONG!", 210, 60);
                     if (canPlay)
                     {
 
@@ -144,6 +148,8 @@ namespace MohawkGame2D
                 if (incorrect == false)
                 {
                     // CORRECT
+                    Text.Size = 100;
+                    Text.Draw("CORRECT!", 210, 60);
                     if (canPlay)
                     {
 
@@ -160,6 +166,8 @@ namespace MohawkGame2D
                 else
                 {
                     // WRONG
+                    Text.Size = 100;
+                    Text.Draw("WRONG!", 210, 60);
                     if (canPlay)
                     {
 
@@ -191,6 +199,8 @@ namespace MohawkGame2D
                 if (incorrect == false)
                 {
                     // CORRECT
+                    Text.Size = 100;
+                    Text.Draw("CORRECT!", 210, 60);
                     if (canPlay)
                     {
 
@@ -207,6 +217,8 @@ namespace MohawkGame2D
                 else
                 {
                     // WRONG
+                    Text.Size = 100;
+                    Text.Draw("WRONG!", 210, 60);
                     if (canPlay)
                     {
 
@@ -237,6 +249,8 @@ namespace MohawkGame2D
                 if (incorrect == false)
                 {
                     // CORRECT
+                    Text.Size = 100;
+                    Text.Draw("CORRECT!", 210, 60);
                     if (canPlay)
                     {
 
@@ -252,6 +266,8 @@ namespace MohawkGame2D
                 else
                 {
                     // WRONG
+                    Text.Size = 100;
+                    Text.Draw("WRONG!", 210, 60);
                     if (canPlay)
                     {
 
@@ -282,6 +298,8 @@ namespace MohawkGame2D
                 if (incorrect == false)
                 {
                     // CORRECT
+                    Text.Size = 100;
+                    Text.Draw("CORRECT!", 210, 60);
                     if (canPlay)
                     {
 
@@ -297,6 +315,8 @@ namespace MohawkGame2D
                 else
                 {
                     // WRONG
+                    Text.Size = 100;
+                    Text.Draw("WRONG!", 210, 60);
                     if (canPlay)
                     {
 
